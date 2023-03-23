@@ -28,13 +28,13 @@ Preprocess datasets:
 
 ## Train the model
 Making a checkpoint dir, please run run_model.py with training mode.
-    mkdir $(checkpoint)
     python -m mesh_simple.run_model --model=cloth --mode=train --checkpoint_dir=$(checkpoint) --dataset_dir=tmp/datasets_h5_pro/flag_simple_500 --load_chk=True --max_epochs=5
+$(checkpoint) is directory name you like for each training.
 
 ## Evaluate the model
 Making a rollout dir, please run run_model.py with evaluate mode.
-    mkdir $(rollout)
     python -m mesh_simple.run_model --model=cloth --mode=eval --checkpoint_dir=$(checkpoint) --dataset_dir=tmp/datasets_h5_pro/flag_simple_500 --rollout_dir=$(rollout) --load_chk=True --num_rollouts=10
+$(rollout) is directory name you like for each evaluation.
 
 ## Plot trajectory
     mkdir tmp/anim_gif
